@@ -7,6 +7,7 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git && \
     cd boxfuse-sample-java-war-hello && \
     mvn package
 RUN cp boxfuse-sample-java-war-hello/target/hello-*.war /var/lib/tomcat9/webapps/
+EXPOSE 8080
 ENV CATALINA_HOME=/usr/share/tomcat9 \
     CATALINA_BASE=/var/lib/tomcat9 \
     CATALINA_TMPDIR=/tmp \
