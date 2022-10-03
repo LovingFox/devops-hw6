@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 RUN apt-get -y update && \
-    apt-get -y python-all python-pip p7zip-full
+    apt-get -y install python-all python-pip p7zip-full
 WORKDIR /opt/webapp
 COPY webapp.z /opt/webapp
 COPY requirments.txt /opt/webapp/requirments.txt
