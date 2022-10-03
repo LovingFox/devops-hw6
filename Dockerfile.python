@@ -4,6 +4,6 @@ RUN apt-get -y update && \
 WORKDIR /opt/webapp
 COPY ./webapp.7z /opt/webapp
 RUN 7z e webapp.7z
-RUN pip install -qr requirments.txt
+RUN pip install -qr /opt/webapp/requirements.txt
 EXPOSE 5000
 CMD ["python", "app.py"]
