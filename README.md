@@ -30,3 +30,18 @@ Test:
 
     docker stop boxfuse
 
+**Dockerfile.python**
+
+Install:
+
+    git clone https://github.com/LovingFox/devops-hw6.git
+    cd devops-hw6
+    docker build -f Dockerfile.python -t pyapp:v0.1
+    docker run --rm -d -p 80:5000 --name pyapp pyapp:v0.1 .
+Test:
+
+    curl 0.0.0.0:80
+  Stop:
+
+    docker stop pyapp
+
